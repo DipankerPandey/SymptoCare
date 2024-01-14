@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SymptoCare" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">#4ECDC4</item>
+
+        
+    </style>
+
+    <style name="Theme.SymptoCare" parent="Base.Theme.SymptoCare" />
+</resources>

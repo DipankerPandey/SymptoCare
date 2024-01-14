@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".DoctorProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewCircleProfile"
+        android:layout_width="202dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/accountcircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Username_input_text5"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Username"
+        app:endIconDrawable="@drawable/pencil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_icon"
+        app:layout_constraintVertical_bias="0.0"
+        app:startIconDrawable="@drawable/person"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextUserNameProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Age_input_text3"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Age"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Username_input_text5"
+        app:layout_constraintVertical_bias="0.075"
+        app:startIconDrawable="@drawable/date">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextAgeProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--
+
+    Delete Gender TextInputLayout
+    Made Three Radio Buttons
+    1. Male
+    2. Female
+    3. Prefer not to say
+    -->
+
+
+    <!--
+    Genrate Gender Text
+    -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Degree_input_text2"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="Degree"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GenderTextView"
+        app:layout_constraintVertical_bias="0.042"
+        app:startIconDrawable="@drawable/lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDegreeProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4ECDC4"
+        android:text="Apply"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Degree_input_text2"
+        app:layout_constraintVertical_bias="0.104" />
+
+    <TextView
+        android:id="@+id/GenderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Gender"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Username_input_text5"
+        app:layout_constraintVertical_bias="0.195" />
+
+    <RadioGroup
+        android:id="@+id/genderRadioGroupProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/Degree_input_text2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GenderTextView">
+
+        <RadioButton
+            android:id="@+id/maleRadioButtonProfile"
+            android:layout_width="100dp"
+            android:layout_height="49dp"
+            android:text="Male"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="404dp" />
+
+        <RadioButton
+            android:id="@+id/femaleRadioButtonProfile"
+            android:layout_width="100dp"
+            android:layout_height="49dp"
+            android:text="Female"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="403dp" />
+
+        <RadioButton
+            android:id="@+id/othersRadioButtonProfile"
+            android:layout_width="156dp"
+            android:layout_height="49dp"
+            android:text="Prefer not to Say"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="241dp"
+            tools:layout_editor_absoluteY="400dp" />
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/camera_icon"
+        android:layout_width="59dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="92dp"
+        android:src="@drawable/camera"
+        app:layout_constraintStart_toStartOf="@+id/imageViewCircleProfile"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCircleProfile"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Not this User?"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignOut"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSignOut"
+        app:layout_constraintStart_toStartOf="@+id/buttonSignOut"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUpdate" />
+
+    <Button
+        android:id="@+id/buttonSignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="#4ECDC4"
+        android:text="LogOut"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUpdate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "669872473903",
+    "firebase_url": "https://symptocare-384b8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "symptocare-384b8",
+    "storage_bucket": "symptocare-384b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669872473903:android:980ede52532dd932c203da",
+        "android_client_info": {
+          "package_name": "com.minor.symptocare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqrh3cvCG7vKfcEUkNeoHbj9Jmh8T2-CQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

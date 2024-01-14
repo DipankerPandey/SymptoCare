@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".DoctorProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewCircleProfile_Patient"
+        android:layout_width="202dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/accountcircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Username_input_text5_Patient"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Username"
+        app:endIconDrawable="@drawable/pencil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_icon_Patient"
+        app:layout_constraintVertical_bias="0.0"
+        app:startIconDrawable="@drawable/person"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextUserNameProfile_Patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Age_input_text3_Patient"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Age"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Username_input_text5_Patient"
+        app:layout_constraintVertical_bias="0.075"
+        app:startIconDrawable="@drawable/date">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextAgeProfile_Patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--
+
+    Delete Gender TextInputLayout
+    Made Three Radio Buttons
+    1. Male
+    2. Female
+    3. Prefer not to say
+    -->
+
+
+    <!--
+    Genrate Gender Text
+    -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Disablity_input_text2_Patient"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="Disablity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GenderTextView_Patient"
+        app:layout_constraintVertical_bias="0.042"
+        app:startIconDrawable="@drawable/disablity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDisablityProfile_Patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonUpdate_Patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="197dp"
+        android:backgroundTint="#4ECDC4"
+        android:text="Apply"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Disablity_input_text2_Patient" />
+
+    <TextView
+        android:id="@+id/GenderTextView_Patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Gender"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Username_input_text5_Patient"
+        app:layout_constraintVertical_bias="0.195" />
+
+    <RadioGroup
+        android:id="@+id/GenderRadioGroup_Patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="250dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Age_input_text3_Patient">
+
+        <RadioButton
+            android:id="@+id/MaleRadioButton_Patient"
+            android:layout_width="100dp"
+            android:layout_height="49dp"
+            android:text="Male"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="404dp" />
+
+        <RadioButton
+            android:id="@+id/FemaleRadioButton_Patient"
+            android:layout_width="100dp"
+            android:layout_height="49dp"
+            android:text="Female"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="403dp" />
+
+        <RadioButton
+            android:id="@+id/OthersRadioButton_Patient"
+            android:layout_width="156dp"
+            android:layout_height="49dp"
+            android:text="Prefer not to Say"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="241dp"
+            tools:layout_editor_absoluteY="400dp" />
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/camera_icon_Patient"
+        android:layout_width="59dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="92dp"
+        android:src="@drawable/camera"
+        app:layout_constraintStart_toStartOf="@+id/imageViewCircleProfile_Patient"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCircleProfile_Patient"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <Button
+        android:id="@+id/LogOut_Patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="132dp"
+
+        android:backgroundTint="#4ECDC4"
+        android:text="LogOut"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Disablity_input_text2_Patient" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
